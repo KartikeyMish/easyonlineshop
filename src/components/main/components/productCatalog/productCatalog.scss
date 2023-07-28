@@ -1,0 +1,68 @@
+@use 'styles/base' as base;
+.product-catalog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5vw;
+    .catalog-control {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2.5vw;
+        &__title {
+            margin:0;
+            color: base.$primary-color;
+            font: {
+                family: base.$primary-font;
+                size: 110%;
+                weight: 500;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 576.99px) {
+    .product-catalog {
+        padding: 0 7vw;
+        flex-direction: column;
+        .catalog-control {
+            margin-bottom: 5vw;
+            &__title {
+                font-size: 95%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768.99px) {
+    .product-catalog {
+        padding: 0 6vw;
+        .catalog-control {
+            margin-bottom: 4vw;
+            &__title {
+                font-size: 105%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 769px) and(max-width: 1024.99px) { 
+    .product-catalog {
+        padding: 0 6vw;
+        .catalog-control {
+            margin-bottom: 3vw;
+            &__title {
+                font-size: 110%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1366.99px) { 
+    .product-catalog {
+        .catalog-control {
+            margin-bottom: 2.5vw;
+            &__title {
+                font-size: 110%;
+            }
+        }
+    }
+}

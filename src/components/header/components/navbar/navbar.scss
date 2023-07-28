@@ -1,0 +1,63 @@
+@use 'styles/base' as base;
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 5vw {
+        bottom: 2vw;
+    }
+    &__logo {
+        margin: 0;
+        color: base.$primary-color;
+        font: {
+            family: base.$primary-font;
+            weight: 600;
+            size: 140%;
+        }
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 576.99px) {
+    .navbar {
+        padding: 7vw {
+            bottom: 4vw;
+        }
+        &__logo {
+            font-size: 120%;
+        }
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768.99px) {
+    .navbar {
+        padding: 6vw {
+            bottom: 3vw;
+        }
+        &__logo {
+            font-size: 140%;
+        }
+    }
+}
+@media only screen and (min-width: 769px) and(max-width: 1024.99px) { 
+    .navbar {
+        padding: 6vw {
+            bottom: 2.5vw;
+        }
+        &__logo {
+            font: {
+                size: 140%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1366.99px) { 
+    .navbar {
+        padding: 5vw {
+            bottom: 2.5vw;
+        }
+        &__logo {
+            font-size: 130%;
+        }
+    }
+}

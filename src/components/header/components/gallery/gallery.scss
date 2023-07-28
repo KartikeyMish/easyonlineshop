@@ -1,0 +1,160 @@
+@use 'styles/base' as base;
+.gallery {
+    position: relative;
+    display: block;
+    width: auto;
+    height: 50vh;
+    margin: 0 5vw 5vw 5vw;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 30, 40, .7);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .next-slide, .prev-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;          
+            height: 100%;
+            padding: 2vw;
+            background-color: rgba(255, 255, 255, .45);
+            color: base.$primary-color;
+            cursor: pointer;
+            transition: .5s;
+            opacity: .25;
+            &:hover {
+                opacity: 1;
+                background-color: rgba(255, 255, 255, .9);
+            }
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;          
+            height: 100%;
+            text-align: center;
+            h3 {
+                margin: 0;
+                color: rgb(200, 200, 200);
+                font: {
+                    family: base.$primary-font;
+                    size: 100%;
+                    weight: 400;
+                }
+            }
+            h2 {
+                color: base.$primary-bg-color;  
+                font: {
+                    family: base.$primary-font;
+                    size: 175%;
+                    weight: 500;
+                }
+            }
+        }
+        .arrow {
+            font-size: 150%;
+        }
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 576.99px) {
+    .gallery {
+        margin: 0 7vw 14vw 7vw;
+        height: 60vh;
+        .overlay {
+            .next-slide, .prev-slide {
+                padding: 3.5vw;
+            }
+            .text {
+                padding: 2vw;
+                h3 {
+                    font-size: 90%;
+                }
+                h2 {
+                    font-size: 125%;
+                }
+            }
+            .arrow {
+                font-size: 120%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768.99px) { 
+    .gallery {
+        margin: 0 6vw 6vw 6vw;
+        height: 40vh;
+        .overlay {
+            .next-slide, .prev-slide {
+                padding: 3vw;
+            }
+            .text {
+                padding: 2vw;
+                h3 {
+                    font-size: 95%;
+                }
+                h2 {
+                    font-size: 135%;
+                }
+            }
+            .arrow {
+                font-size: 130%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 769px) and(max-width: 1024.99px) { 
+    .gallery {
+        margin: 0 6vw 6vw 6vw;
+        height: 30vh;
+        .overlay {
+            .next-slide, .prev-slide {
+                padding: 2.5vw;
+            }
+            .text {
+                padding: 2vw;
+                h3 {
+                    font-size: 100%;
+                }
+                h2 {
+                    font-size: 145%;
+                }
+            }
+            .arrow {
+                font-size: 130%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1366.99px) { 
+    .gallery {
+        height: 45vh;
+        .overlay {
+            .next-slide, .prev-slide {
+                padding: 2.5vw;
+            }
+            .text {
+                padding: 2vw;
+                h3 {
+                    font-size: 105%;
+                }
+                h2 {
+                    font-size: 160%;
+                }
+            }
+            .arrow {
+                font-size: 140%;
+            }
+        }
+
+    }
+}

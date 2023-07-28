@@ -1,0 +1,95 @@
+@use 'styles/base' as base;
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &__item {
+        margin: 0 1.5vw;
+        padding: 0;
+        display: block;
+        cursor: pointer;
+        color: base.$primary-color;
+        font: {
+            family: base.$primary-font;
+            size: 100%;
+            weight: 400;
+        }
+        transition: .5s;
+        &:hover {
+            color: rgb(150, 150, 150);
+        }
+        &--cta {
+            background-color: base.$primary-color;
+            color: base.$primary-bg-color;
+            padding: .75vw 1.5vw;
+            font-weight: 400;
+            cursor: pointer;
+            transition: .5s;
+            &:hover {
+                color: base.$primary-color;
+                background-color: rgb(240, 240, 240);
+            }
+        }
+    }
+    &__item:last-of-type {
+        margin-right: 0;
+    }
+    &--desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &--mobile {
+        display: flex;
+        flex-direction: column;
+        .menu__item {
+            margin: 3vw 0;
+        }
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 576.99px) {
+    .menu {
+        &--mobile {
+            .menu__item {
+                &:first-of-type {
+                    margin-top: 14vw;
+                }
+                margin: 3.5vw 0;
+                font-size: 90%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768.99px) {
+    .menu {
+        &--mobile {
+            .menu__item {
+                margin: 5vw 0;
+                font-size: 110%;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024.99px) { 
+    .menu {
+        &__item {
+            margin: 0 2vw;
+            font-size: 90%;
+            &--cta {
+                padding: 1vw 2vw;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1366.99px) { 
+    .menu {
+        &__item {
+            margin: 0 2vw;
+            font-size: 90%;
+            &--cta {
+                padding: 1vw 2.5vw;
+            }
+        }
+    }
+}
